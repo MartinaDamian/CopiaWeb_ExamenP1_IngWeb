@@ -1,0 +1,89 @@
+// ==========================================
+// Componente: Tarjetas de Características (Cards)
+// Metodología BEM: .features & .card
+// Uso de CSS Grid (contenedor) y Flexbox (contenido)
+// ==========================================
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.features {
+  // Aplicación de CSS Grid para la distribución de tarjetas
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+  max-width: 1080px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  @include respond-to('mobile') {
+    row-gap: 35px;
+    margin: 35px auto;
+  }
+}
+
+.card {
+  // Aplicación de Flexbox para alinear texto e imagen
+  @include flex-layout(row, space-between, center, 80px);
+  background-color: $color-white;
+  border-radius: $border-radius-card;
+  box-shadow: $shadow-card;
+  padding: 55px 70px 55px 100px;
+  width: 100%;
+
+  // Modificador BEM para invertir el orden
+  &--reverse {
+    flex-direction: row-reverse;
+    padding: 55px 100px 55px 70px;
+  }
+
+  &__content {
+    flex: 1;
+    max-width: 480px;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+
+    @include respond-to('mobile') {
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__description {
+    color: $color-text-muted;
+
+    @include respond-to('mobile') {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+
+  &__image {
+    flex: 1;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+
+    @include respond-to('mobile') {
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  }
+
+  @include respond-to('mobile') {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 50px 30px 40px 30px;
+    gap: 40px;
+
+    &--reverse {
+      flex-direction: column-reverse;
+      padding: 50px 30px 40px 30px;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+  }
+}

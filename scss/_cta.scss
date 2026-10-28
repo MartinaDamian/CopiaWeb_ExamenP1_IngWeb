@@ -1,0 +1,49 @@
+// ==========================================
+// Componente: Call to Action (CTA)
+// Metodología BEM: .cta
+// ==========================================
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.cta {
+  @include flex-layout(column, center, center);
+  background-color: $color-white;
+  border-radius: $border-radius-card;
+  box-shadow: $shadow-cta;
+  max-width: 720px;
+  margin: 100px auto -90px auto;
+  padding: 55px 40px;
+  position: relative;
+  z-index: 10;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 30px;
+
+    @include respond-to('mobile') {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__btn {
+    @include button-custom(
+      $bg-color: $color-primary,
+      $text-color: $color-white,
+      $padding: 22px 85px,
+      $font-size: 16px,
+      $radius: 35px,
+      $shadow: $shadow-btn-primary
+    );
+
+    @include respond-to('mobile') {
+      font-size: 13px;
+      padding: 14px 45px;
+    }
+  }
+
+  @include respond-to('mobile') {
+    margin: 70px 15px -80px 15px;
+    padding: 45px 20px;
+  }
+}

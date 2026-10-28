@@ -1,0 +1,88 @@
+// ==========================================
+// Componente: Hero Section
+// Metodología BEM: .hero-section & .hero
+// ==========================================
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero-section {
+  background-image: url('resources/HERO BG.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  padding: 40px 80px 60px 80px;
+
+  @include respond-to('mobile') {
+    padding: 25px 20px 45px 20px;
+  }
+}
+
+.hero {
+  @include flex-layout(row, space-around, center);
+  margin-top: 50px;
+
+  &__content {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    @include respond-to('mobile') {
+      font-size: 24px;
+      line-height: 1.45;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__description {
+    color: $color-dark;
+    margin-bottom: 30px;
+
+    @include respond-to('mobile') {
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__btn {
+    @include button-custom(
+      $bg-color: $color-primary,
+      $text-color: $color-white,
+      $padding: 16px 65px,
+      $font-size: 14px,
+      $radius: 28px
+    );
+
+    @include respond-to('mobile') {
+      padding: 13px 55px;
+      font-size: 13px;
+    }
+  }
+
+  &__image {
+    flex: 1.1;
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+
+    @include respond-to('mobile') {
+      max-width: 320px;
+    }
+  }
+
+  @include respond-to('mobile') {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+    gap: 50px;
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 100%;
+    }
+  }
+}

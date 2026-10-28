@@ -1,0 +1,16 @@
+// ==========================================
+// Archivo Principal Sass (SCSS)
+// Proyecto Progreso 1 - Huddle Landing Page
+// ==========================================
+
+// 1. Base y Utilidades
+@use 'variables';
+@use 'mixins';
+@use 'base';
+
+// 2. Componentes Modulares BEM
+@use 'header';
+@use 'hero';
+@use 'card';
+@use 'cta';
+@use 'footer';

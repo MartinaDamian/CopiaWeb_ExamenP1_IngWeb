@@ -1,0 +1,21 @@
+{
+  "name": "examen-p1-huddle",
+  "version": "1.0.0",
+  "description": "Proyecto Progreso 1 - Landing Page Huddle con BEM, Sass, CSS Grid y Flexbox",
+  "scripts": {
+    "sass:build": "sass scss/main.scss styles.css --no-source-map",
+    "sass:watch": "sass --watch scss/main.scss styles.css"
+  },
+  "keywords": [
+    "sass",
+    "bem",
+    "grid",
+    "flexbox",
+    "responsive"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

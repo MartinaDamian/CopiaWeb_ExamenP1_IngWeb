@@ -1,0 +1,32 @@
+// ==========================================
+// Variables del Proyecto Huddle
+// ==========================================
+
+// --- Paleta de Colores ---
+$color-primary: #FF52C1;
+$color-primary-hover: #ff78d0;
+$color-dark: #00252e;
+$color-text-muted: #808d99;
+$color-white: #ffffff;
+$color-footer-bg: #00252e;
+
+// --- Tipografía ---
+$font-family-body: 'Open Sans', Arial, sans-serif;
+$font-family-heading: 'Poppins', sans-serif;
+
+$font-size-base: 16px;
+$font-size-h1: 38px;
+$font-size-h2: 30px;
+$font-size-h3: 26px;
+
+// --- Sombras y Bordes ---
+$shadow-card: 0 0 20px rgba(0, 0, 0, 0.08);
+$shadow-cta: 0 0 20px rgba(0, 0, 0, 0.1);
+$shadow-btn-light: 0 4px 12px rgba(0, 0, 0, 0.1);
+$shadow-btn-primary: 0 6px 20px rgba(255, 82, 191, 0.4);
+
+$border-radius-card: 16px;
+$border-radius-btn: 30px;
+
+// --- Responsive Breakpoints ---
+$breakpoint-mobile: 820px;

@@ -1,0 +1,36 @@
+// ==========================================
+// Componente: Header
+// Metodología BEM: .header
+// ==========================================
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.header {
+  @include flex-layout(row, space-between, center);
+  width: 100%;
+
+  &__logo {
+    width: 180px;
+    height: auto;
+
+    @include respond-to('mobile') {
+      width: 120px;
+    }
+  }
+
+  &__btn {
+    @include button-custom(
+      $bg-color: $color-white,
+      $text-color: $color-dark,
+      $padding: 13px 55px,
+      $font-size: 14px,
+      $radius: $border-radius-btn,
+      $shadow: $shadow-btn-light
+    );
+
+    @include respond-to('mobile') {
+      padding: 8px 24px;
+      font-size: 12px;
+    }
+  }
+}
